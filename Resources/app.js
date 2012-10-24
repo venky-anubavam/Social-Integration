@@ -8,6 +8,12 @@
 Ti.include('fb.js');
 var social = require('social');
 
+var CONSUMER_KEY = '46STS57WEiBXn9GtMdg';
+var CONSUMER_SECRET = 'TxvQwIwZFsy4iD7Oyt9a9tVSSULKig2VjJb9JvSg4g';
+
+Titanium.Facebook.appid = "379809418766008"; //Production
+Titanium.Facebook.permissions = ['publish_stream', 'read_stream'];
+
 var win = Ti.UI.createWindow({
 	backgroundColor : '#fff'
 });
@@ -49,11 +55,6 @@ win.add(fbImageButton);
 
 win.open();
 
-var CONSUMER_KEY = '46STS57WEiBXn9GtMdg';
-var CONSUMER_SECRET = 'TxvQwIwZFsy4iD7Oyt9a9tVSSULKig2VjJb9JvSg4g';
-
-Titanium.Facebook.appid = "379809418766008"; //Production
-Titanium.Facebook.permissions = ['publish_stream', 'read_stream'];
 
 //Create a Twitter client for this module
 var twitter = social.create({
